@@ -1,4 +1,4 @@
-const CACHE_NAME = 'sayedtech-socials-v11';
+const CACHE_NAME = 'sayedtech-socials-v14';
 const APP_SHELL = [
   './',
   './index.html',
@@ -15,13 +15,13 @@ const APP_SHELL = [
   './src/js/constants/index.js',
   './src/js/constants/i18n.js',
   './src/js/constants/profile.json',
-  './src/js/constants/profile_ar.json',
   './src/js/renderers/portal.js',
   './src/js/events.js',
   './src/js/utils/paths.js',
   './SayedTech-Logo-System/SVG/icon-badge.svg',
   './SayedTech-Logo-System/SVG/logo-horizontal-reversed.svg',
-  './SayedTech-Logo-System/SVG/logo-horizontal-black.svg'
+  './SayedTech-Logo-System/SVG/logo-horizontal-black.svg',
+  './SayedTech-Logo-System/Social-Media/youtube-banner.png'
 ];
 
 self.addEventListener('install', (event) => {

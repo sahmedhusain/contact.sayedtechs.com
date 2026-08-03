@@ -23,6 +23,18 @@
   pointer-events: none;
 }
 
+.ambient-bg::before {
+  content: "";
+  position: absolute;
+  inset: -100px; /* Bleed outward to prevent hard edges when blurred */
+  background: url('../../../SayedTech-Logo-System/Social-Media/youtube-banner.png') no-repeat center center / cover;
+  filter: blur(80px) saturate(1.4);
+  opacity: 0.45;
+  transition: var(--transition-slow);
+}
+
+
+
 .glow-bubble {
   position: absolute;
   border-radius: 50%;

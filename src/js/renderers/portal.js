@@ -31,13 +31,8 @@ function getIconForPlatform(platform) {
 }
 
 export function renderPortal(data) {
-  const theme = document.documentElement.getAttribute('data-theme') || 'dark';
-
-  const themeIcon = theme === 'dark' ? 'sunny-outline' : 'moon-outline';
-
-  // Select horizontal logo based on theme
-  const logoFilename = theme === 'dark' ? 'logo-horizontal-reversed.svg' : 'logo-horizontal-black.svg';
-  const logoPath = resolvePath(`SayedTech-Logo-System/SVG/${logoFilename}`);
+  // Always use the white reversed logo for dark mode
+  const logoPath = resolvePath('SayedTech-Logo-System/SVG/logo-horizontal-reversed.svg');
   const avatarPath = resolvePath('SayedTech-Logo-System/SVG/icon-badge.svg');
 
   // Render link cards
@@ -61,13 +56,6 @@ export function renderPortal(data) {
   const footerText = `© ${currentYear} <a href="https://sayedtechs.com" target="_blank" rel="noopener noreferrer" class="footer-link">@SayedTechs</a>. All rights reserved.`;
 
   return `
-    <!-- Top Action Toggles -->
-    <header class="portal-header-actions">
-      <button class="action-btn" id="theme-toggle-btn" aria-label="Toggle theme">
-        <ion-icon name="${themeIcon}" id="theme-icon"></ion-icon>
-      </button>
-    </header>
-
     <!-- Profile Branding Card -->
     <section class="profile-card">
       <div class="profile-avatar-container">

@@ -293,13 +293,8 @@
   text-decoration: underline;
 }
 
-/* Platform specific override for X card */
+/* Platform specific override for X card (always white in dark mode) */
 .card-x {
-  --card-accent-color: #000000 !important;
-  --card-glow-color: rgba(10, 10, 10, 0.08) !important;
-}
-
-[data-theme="dark"] .card-x {
   --card-accent-color: #FFFFFF !important;
   --card-glow-color: rgba(255, 255, 255, 0.12) !important;
 }
