@@ -1,0 +1,94 @@
+/* --- SayedTech Design Tokens & CSS Variables --- */
+:root {
+  /* Core Colors */
+  --ink-black: #0A0A0A;
+  --pure-white: #FFFFFF;
+  --barzakh-teal: #00B5A5;
+  --desert-gold: #C9A24B;
+  --midnight: #0E1B2A;
+  --graphite: #1C1C1E;
+  --steel: #3A3A3C;
+  --fog: #F2F2F4;
+
+  /* App Theme Variables (Default Light Mode) */
+  --primary: #F2F2F4;            /* Fog as primary bg */
+  --secondary: #FFFFFF;          /* White surfaces */
+  --tertiary: #E4E4E7;
+  --accent: #0A0A0A;             /* Black ink text/icons */
+  --accent-hover: #00B5A5;       /* Barzakh Teal on hover */
+  --accent-glow: rgba(0, 181, 165, 0.15);
+  --accent-light: rgba(0, 181, 165, 0.05);
+  --text-primary: #0A0A0A;
+  --text-secondary: #3A3A3C;     /* Steel for secondary text */
+  --white: #FFFFFF;
+  --navy-shadow: rgba(14, 27, 42, 0.08);
+  --card-bg: rgba(255, 255, 255, 0.8);
+  --card-border: rgba(58, 58, 60, 0.15);
+  --gradient-start: rgba(242, 242, 244, 0.8);
+  --gradient-end: #FFFFFF;
+  --glass-bg: rgba(255, 255, 255, 0.85);
+  --apple-glass-bg: rgba(255, 255, 255, 0.7);
+  --apple-glass-border: rgba(255, 255, 255, 0.4);
+  --overlay: rgba(242, 242, 244, 0.95);
+  --mono-logo-filter: none;
+
+  /* Accent Highlight Helpers */
+  --glow-color: var(--barzakh-teal);
+  --glow-color-secondary: var(--desert-gold);
+
+  /* Typography */
+  --font-sans: "IBM Plex Sans", "Tajawal", "Outfit", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-arabic: "Tajawal", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --font-mono: "IBM Plex Mono", "Fira Code", "SF Mono", monospace;
+
+  /* Layout Spacing */
+  --nav-height: 80px;
+  --section-padding: 60px;
+  --container-max: 680px; /* Slimmer max-width for Linktree style */
+
+  /* Transitions & Animations */
+  --transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition-slow: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+  --transition-bounce: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  --transition-smooth: all 0.4s ease-in-out;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(10, 10, 10, 0.05);
+  --shadow-md: 0 4px 12px rgba(10, 10, 10, 0.08);
+  --shadow-lg: 0 12px 24px rgba(10, 10, 10, 0.06);
+  --shadow-xl: 0 24px 48px rgba(10, 10, 10, 0.08);
+  --shadow-glow: 0 0 20px rgba(0, 181, 165, 0.25);
+  --shadow-accent: 0 0 12px rgba(0, 181, 165, 0.1);
+
+  --radius-xl: 16px;
+}
+
+[data-theme="dark"] {
+  --primary: #0A0A0A;            /* Ink Black as primary bg */
+  --secondary: #1C1C1E;          /* Graphite surfaces */
+  --tertiary: #3A3A3C;           /* Steel */
+  --accent: #FFFFFF;             /* White text/icons */
+  --accent-hover: #00B5A5;       /* Barzakh Teal on hover */
+  --accent-glow: rgba(0, 181, 165, 0.3);
+  --accent-light: rgba(0, 181, 165, 0.08);
+  --text-primary: #FFFFFF;
+  --text-secondary: #F2F2F4;     /* Fog for secondary text */
+  --card-bg: rgba(28, 28, 30, 0.65);
+  --card-border: rgba(58, 58, 60, 0.4);
+  --glass-bg: rgba(10, 10, 10, 0.85);
+  --apple-glass-bg: rgba(28, 28, 30, 0.65);
+  --apple-glass-border: rgba(255, 255, 255, 0.08);
+  --overlay: rgba(10, 10, 10, 0.98);
+  --mono-logo-filter: none;      /* Logo horizontal reversed is already white */
+}
+
+/* Responsive adjustments */
+@media (max-width: 580px) {
+  :root {
+    --section-padding: 30px;
+  }
+}
+
+[dir="rtl"] {
+  --font-sans: var(--font-arabic);
+}

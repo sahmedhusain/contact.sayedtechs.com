@@ -1,0 +1,73 @@
+/* --- Layout System --- */
+
+.social-portal-layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-block-size: 100dvh; /* Mobile browser friendly viewport unit */
+  padding-block: var(--section-padding);
+  padding-inline: 1rem;
+  position: relative;
+  overflow: hidden;
+  background: var(--primary);
+  transition: var(--transition-slow);
+}
+
+/* Ambient glow bubble background container */
+.ambient-bg {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.glow-bubble {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(120px);
+  opacity: 0.15;
+  transition: var(--transition-slow);
+}
+
+[data-theme="dark"] .glow-bubble {
+  opacity: 0.22;
+}
+
+.glow-bubble-teal {
+  background: var(--barzakh-teal);
+  inline-size: 350px;
+  block-size: 350px;
+  inset-block-start: -100px;
+  inset-inline-start: -100px;
+}
+
+.glow-bubble-gold {
+  background: var(--desert-gold);
+  inline-size: 300px;
+  block-size: 300px;
+  inset-block-end: -100px;
+  inset-inline-end: -100px;
+}
+
+.glow-bubble-midnight {
+  background: var(--midnight);
+  inline-size: 500px;
+  block-size: 500px;
+  inset-block-start: 30%;
+  inset-inline-start: 25%;
+  opacity: 0.4;
+}
+
+/* Main inner container */
+.portal-container {
+  inline-size: 100%;
+  max-inline-size: var(--container-max);
+  margin-inline: auto;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2rem;
+}

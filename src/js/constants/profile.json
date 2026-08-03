@@ -1,0 +1,80 @@
+{
+  "name": "Mr.Tech | سيد التقنية",
+  "handle": "@sayedtechs",
+  "bio_ar": "تكنولوجيا، هندسة، ألعاب، ذكاء اصطناعي، تقنيات السيارات، وإلكترونيات.",
+  "bio_en": "Technology, Engineering, Gaming, AI, Automotive, and Electronics.",
+  "links": [
+    {
+      "platform": "website",
+      "title_ar": "الموقع",
+      "title_en": "Website",
+      "subtitle": "sayedtechs.com",
+      "url": "https://sayedtechs.com",
+      "accentColor": "#00B5A5",
+      "glowColor": "rgba(0, 181, 165, 0.15)"
+    },
+    {
+      "platform": "snapchat",
+      "title_ar": "سناب شات",
+      "title_en": "Snapchat",
+      "subtitle": "@sayedtechs",
+      "url": "https://www.snapchat.com/add/sayedtechs",
+      "accentColor": "#FFFC00",
+      "glowColor": "rgba(255, 252, 0, 0.15)"
+    },
+    {
+      "platform": "facebook",
+      "title_ar": "الفيسبوك",
+      "title_en": "Facebook",
+      "subtitle": "@sayedtechs",
+      "url": "https://www.facebook.com/sayedtechs",
+      "accentColor": "#1877F2",
+      "glowColor": "rgba(24, 119, 242, 0.15)"
+    },
+    {
+      "platform": "instagram",
+      "title_ar": "إنستغرام",
+      "title_en": "Instagram",
+      "subtitle": "@sayedtechs",
+      "url": "https://www.instagram.com/sayedtechs",
+      "accentColor": "#E4405F",
+      "glowColor": "rgba(228, 64, 95, 0.15)"
+    },
+    {
+      "platform": "x",
+      "title_ar": "إكس (تويتر)",
+      "title_en": "X (Twitter)",
+      "subtitle": "@sayedtechs",
+      "url": "https://x.com/sayedtechs",
+      "accentColor": "#000000",
+      "glowColor": "rgba(10, 10, 10, 0.08)"
+    },
+    {
+      "platform": "tiktok",
+      "title_ar": "تيك توك",
+      "title_en": "TikTok",
+      "subtitle": "@sayedtechs",
+      "url": "https://www.tiktok.com/@sayedtechs",
+      "accentColor": "#00F2EA",
+      "glowColor": "rgba(0, 242, 234, 0.15)"
+    },
+    {
+      "platform": "youtube",
+      "title_ar": "اليوتيوب",
+      "title_en": "YouTube",
+      "subtitle": "@sayedtechs",
+      "url": "https://www.youtube.com/@sayedtechs",
+      "accentColor": "#FF0000",
+      "glowColor": "rgba(255, 0, 0, 0.15)"
+    },
+    {
+      "platform": "email",
+      "title_ar": "البريد الإلكتروني",
+      "title_en": "Email",
+      "subtitle": "info@sayedtechs.com",
+      "url": "mailto:info@sayedtechs.com",
+      "accentColor": "#C9A24B",
+      "glowColor": "rgba(201, 162, 75, 0.15)"
+    }
+  ]
+}

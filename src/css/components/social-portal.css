@@ -1,0 +1,307 @@
+/* --- Component: Social Portal & Linktree Card Interface --- */
+
+/* Utility header area for toggles */
+.portal-header-actions {
+  inline-size: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 0.75rem;
+  margin-block-end: 1rem;
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+.action-btn {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  color: var(--accent);
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius-xl);
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  transition: var(--transition);
+}
+
+.action-btn:hover {
+  background: var(--tertiary);
+  border-color: var(--barzakh-teal);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-accent);
+}
+
+.action-btn:focus-visible {
+  outline: 2px solid var(--barzakh-teal);
+  outline-offset: 3px;
+}
+
+.action-btn ion-icon {
+  font-size: 1.1rem;
+}
+
+/* Profile branding card */
+.profile-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1.25rem;
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.profile-avatar-container {
+  position: relative;
+  inline-size: 110px;
+  block-size: 110px;
+  background: var(--pure-white);
+  /* The brand icon badge is sharp with a 22px document fold cut at bottom right */
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%);
+  padding: 3px;
+  box-shadow: var(--shadow-md);
+  transition: var(--transition);
+}
+
+.profile-avatar-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, var(--barzakh-teal), var(--desert-gold));
+  z-index: -1;
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%);
+}
+
+.profile-avatar-container:hover {
+  transform: scale(1.05) rotate(1deg);
+  box-shadow: var(--shadow-glow);
+}
+
+.profile-avatar {
+  inline-size: 100%;
+  block-size: 100%;
+  background: var(--pure-white);
+  object-fit: contain;
+  clip-path: polygon(0 0, 100% 0, 100% 78%, 78% 100%, 0 100%);
+}
+
+.profile-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile-title-img {
+  max-inline-size: 260px;
+  margin-block-end: 0.5rem;
+  transition: var(--transition);
+  filter: var(--mono-logo-filter);
+}
+
+.profile-name {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--accent);
+}
+
+.profile-handle {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  color: var(--barzakh-teal);
+  letter-spacing: -0.5px;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.profile-handle:hover {
+  color: var(--desert-gold);
+  transform: scale(1.02);
+}
+
+.profile-bio {
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  max-inline-size: 450px;
+  text-wrap: pretty;
+  margin-block-end: 0.25rem;
+  text-align: center; /* Ensures text is centered in all view modes */
+  white-space: pre-line; /* Respects standard newlines for line breaks */
+}
+
+.bio-ar {
+  font-family: var(--font-arabic);
+  line-height: 1.7;
+  direction: rtl;
+  text-align: center; /* Explicitly centers the RTL text */
+}
+
+.bio-en {
+  font-family: var(--font-sans);
+  line-height: 1.55;
+  direction: ltr;
+  text-align: center; /* Explicitly centers the LTR text */
+}
+
+/* Links stack - Grid view layout */
+.links-stack {
+  inline-size: 100%;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+
+/* Glassmorphism Link Card */
+.social-link-card {
+  display: flex;
+  align-items: center;
+  padding: 1.1rem 1.5rem;
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-xl);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.05rem;
+  text-decoration: none;
+  transition: var(--transition-bounce);
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  cursor: pointer;
+  min-block-size: 58px; /* Touch target minimum height */
+}
+
+/* Left-border colored highlight line on card */
+.social-link-card::before {
+  content: "";
+  position: absolute;
+  inset-block-start: 0;
+  inset-block-end: 0;
+  inset-inline-start: 0;
+  inline-size: 4px;
+  background: var(--card-accent-color, var(--barzakh-teal));
+  opacity: 0.7;
+  transition: var(--transition);
+}
+
+/* Hover effects */
+.social-link-card:hover {
+  background: var(--glass-bg);
+  border-color: var(--card-accent-color, var(--barzakh-teal));
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-md), 0 8px 24px var(--card-glow-color, rgba(0, 181, 165, 0.08));
+  color: var(--card-accent-color, var(--barzakh-teal));
+}
+
+.social-link-card:hover::before {
+  inline-size: 6px;
+  opacity: 1;
+}
+
+.social-link-card:focus-visible {
+  outline: 2px solid var(--card-accent-color, var(--barzakh-teal));
+  outline-offset: 3px;
+}
+
+/* Card content spacing */
+.card-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 1rem;
+  font-size: 1.4rem;
+  inline-size: 28px;
+  block-size: 28px;
+  color: var(--card-accent-color, var(--accent));
+  transition: var(--transition);
+}
+
+.social-link-card:hover .card-icon {
+  transform: scale(1.15);
+  color: var(--card-accent-color);
+}
+
+.card-title {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  inline-size: 100%;
+  direction: ltr; /* Force English left / Arabic right alignment */
+}
+
+.title-en {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  letter-spacing: -0.2px;
+}
+
+.title-ar {
+  font-family: var(--font-arabic);
+  font-weight: 700;
+  margin-inline-start: 1rem;
+}
+
+/* Footer Section */
+.portal-footer {
+  margin-block-start: 2rem;
+  text-align: center;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  animation: fadeInUp 0.8s ease-out forwards;
+}
+
+.footer-logo {
+  max-inline-size: 120px;
+  opacity: 0.45;
+  transition: var(--transition);
+  filter: var(--mono-logo-filter);
+}
+
+.footer-logo:hover {
+  opacity: 0.85;
+}
+
+.footer-text {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  letter-spacing: -0.3px;
+}
+
+.footer-link {
+  color: var(--barzakh-teal);
+  text-decoration: none;
+  font-weight: 600;
+  transition: var(--transition);
+  display: inline-block;
+}
+
+.footer-link:hover {
+  color: var(--desert-gold);
+  text-decoration: underline;
+}
+
+/* Platform specific override for X card */
+.card-x {
+  --card-accent-color: #000000 !important;
+  --card-glow-color: rgba(10, 10, 10, 0.08) !important;
+}
+
+[data-theme="dark"] .card-x {
+  --card-accent-color: #FFFFFF !important;
+  --card-glow-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+

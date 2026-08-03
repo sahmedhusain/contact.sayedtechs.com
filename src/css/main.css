@@ -1,0 +1,13 @@
+/* Main CSS Entry Point */
+
+/* Variables & Base Styles */
+@import "./variables.css";
+@import "./base.css";
+@import "./animations.css";
+@import "./layout.css";
+
+/* Components */
+@import "./components/social-portal.css";
+
+/* Text Direction (RTL Arabic Overrides) */
+@import "./rtl.css";

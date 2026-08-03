@@ -1,0 +1,15 @@
+/* --- Right-to-Left (RTL) Overrides --- */
+
+[dir="rtl"] {
+  direction: rtl;
+  text-align: right;
+}
+
+[dir="rtl"] .portal-container {
+  text-align: center;
+}
+
+[dir="rtl"] .social-link-card {
+  flex-direction: row-reverse; /* Flip card text and icon positioning */
+}
+

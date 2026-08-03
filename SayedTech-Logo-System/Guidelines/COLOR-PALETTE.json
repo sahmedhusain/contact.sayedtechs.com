@@ -1,0 +1,107 @@
+{
+  "core": {
+    "ink_black": {
+      "hex": "#0A0A0A",
+      "rgb": [
+        10,
+        10,
+        10
+      ],
+      "cmyk": [
+        0,
+        0,
+        0,
+        96
+      ],
+      "use": "Primary background, ink"
+    },
+    "pure_white": {
+      "hex": "#FFFFFF",
+      "rgb": [
+        255,
+        255,
+        255
+      ],
+      "cmyk": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "use": "Reverse ink, badge fill"
+    }
+  },
+  "accent_gcc": {
+    "barzakh_teal": {
+      "hex": "#00B5A5",
+      "rgb": [
+        0,
+        181,
+        165
+      ],
+      "cmyk": [
+        100,
+        0,
+        9,
+        29
+      ],
+      "use": "Primary accent — Gulf sea/pearl teal"
+    },
+    "desert_gold": {
+      "hex": "#C9A24B",
+      "rgb": [
+        201,
+        162,
+        75
+      ],
+      "cmyk": [
+        0,
+        19,
+        63,
+        21
+      ],
+      "use": "Secondary accent — warm GCC gold"
+    },
+    "midnight": {
+      "hex": "#0E1B2A",
+      "rgb": [
+        14,
+        27,
+        42
+      ],
+      "cmyk": [
+        67,
+        36,
+        0,
+        84
+      ],
+      "use": "Deep tech navy for gradients/depth"
+    }
+  },
+  "neutral": {
+    "graphite": {
+      "hex": "#1C1C1E",
+      "rgb": [
+        28,
+        28,
+        30
+      ]
+    },
+    "steel": {
+      "hex": "#3A3A3C",
+      "rgb": [
+        58,
+        58,
+        60
+      ]
+    },
+    "fog": {
+      "hex": "#F2F2F4",
+      "rgb": [
+        242,
+        242,
+        244
+      ]
+    }
+  }
+}
